@@ -1,0 +1,255 @@
+{
+  "categories": [
+    {
+      "id": "creative-writing",
+      "name": "Escrita criativa, storytelling",
+      "keywords": [
+        "escrever história",
+        "criar história",
+        "storytelling",
+        "narrativa",
+        "conto",
+        "romance",
+        "ficção",
+        "criativo",
+        "guião",
+        "script",
+        "poesia",
+        "poema",
+        "letra de música",
+        "diálogo"
+      ],
+      "bestAI": "ChatGPT",
+      "score": 95,
+      "justification": "Gera textos coesos e estilizados com excelente qualidade narrativa",
+      "alternative": "Claude",
+      "alternativeScore": 88
+    },
+    {
+      "id": "document-analysis",
+      "name": "Análise e leitura de documentos longos",
+      "keywords": [
+        "analisar documento",
+        "ler pdf",
+        "resumir documento",
+        "resumo",
+        "análise de texto",
+        "documento longo",
+        "ler artigo",
+        "extrair informação",
+        "revisar texto",
+        "comparar documentos"
+      ],
+      "bestAI": "Claude",
+      "score": 97,
+      "justification": "Excelente capacidade de contexto e leitura extensa com atenção aos detalhes",
+      "alternative": "ChatGPT",
+      "alternativeScore": 85
+    },
+    {
+      "id": "factual-research",
+      "name": "Pesquisa factual e atual",
+      "keywords": [
+        "pesquisar",
+        "procurar informação",
+        "informação atual",
+        "notícias",
+        "dados recentes",
+        "factos",
+        "estatísticas",
+        "pesquisa",
+        "descobrir",
+        "atual",
+        "em tempo real",
+        "fontes",
+        "verificar"
+      ],
+      "bestAI": "Perplexity",
+      "score": 93,
+      "justification": "Pesquisa em tempo real com acesso à web e citação de fontes fiáveis",
+      "alternative": "Gemini",
+      "alternativeScore": 80
+    },
+    {
+      "id": "google-integration",
+      "name": "Integração com Google Workspace",
+      "keywords": [
+        "google",
+        "gmail",
+        "google docs",
+        "google sheets",
+        "google drive",
+        "google calendar",
+        "workspace",
+        "gmail",
+        "slides",
+        "apresentação google"
+      ],
+      "bestAI": "Gemini",
+      "score": 96,
+      "justification": "Nativo no ecossistema Google com integração perfeita em todos os serviços",
+      "alternative": "ChatGPT",
+      "alternativeScore": 70
+    },
+    {
+      "id": "automation",
+      "name": "Criação de automações e fluxos",
+      "keywords": [
+        "automação",
+        "automatizar",
+        "workflow",
+        "fluxo",
+        "integração",
+        "api",
+        "zapier",
+        "make",
+        "n8n",
+        "mcp",
+        "conectar",
+        "pipeline"
+      ],
+      "bestAI": "ChatGPT",
+      "score": 94,
+      "justification": "Suporte robusto a MCPs, plugins e integrações externas variadas",
+      "alternative": "Gemini",
+      "alternativeScore": 82
+    },
+    {
+      "id": "technical-writing",
+      "name": "Escrita técnica ou precisa",
+      "keywords": [
+        "artigo técnico",
+        "documentação",
+        "técnico",
+        "tutorial",
+        "manual",
+        "especificação",
+        "relatório",
+        "white paper",
+        "científico",
+        "académico",
+        "preciso",
+        "detalhado"
+      ],
+      "bestAI": "Claude",
+      "score": 90,
+      "justification": "Excelente clareza, concisão técnica e estruturação lógica de conteúdo",
+      "alternative": "ChatGPT",
+      "alternativeScore": 87
+    },
+    {
+      "id": "quick-questions",
+      "name": "Perguntas rápidas, factuais",
+      "keywords": [
+        "pergunta rápida",
+        "resposta rápida",
+        "o que é",
+        "como funciona",
+        "definição",
+        "explicar",
+        "factual",
+        "direto",
+        "simples",
+        "quick"
+      ],
+      "bestAI": "Perplexity",
+      "score": 91,
+      "justification": "Respostas diretas e concisas com fontes verificáveis e interface rápida",
+      "alternative": "Gemini",
+      "alternativeScore": 84
+    },
+    {
+      "id": "code-generation",
+      "name": "Programação e código",
+      "keywords": [
+        "código",
+        "programar",
+        "desenvolver",
+        "app",
+        "aplicação",
+        "website",
+        "debug",
+        "corrigir código",
+        "função",
+        "algoritmo",
+        "script",
+        "python",
+        "javascript",
+        "typescript"
+      ],
+      "bestAI": "ChatGPT",
+      "score": 92,
+      "justification": "Excelente geração de código com amplo conhecimento de linguagens e frameworks",
+      "alternative": "Claude",
+      "alternativeScore": 90
+    },
+    {
+      "id": "brainstorming",
+      "name": "Brainstorming e ideias",
+      "keywords": [
+        "brainstorming",
+        "ideias",
+        "sugestões",
+        "inspiração",
+        "criar ideias",
+        "gerar ideias",
+        "inovação",
+        "criatividade",
+        "conceito"
+      ],
+      "bestAI": "ChatGPT",
+      "score": 89,
+      "justification": "Gera ideias criativas e diversificadas com boa estruturação",
+      "alternative": "Claude",
+      "alternativeScore": 86
+    },
+    {
+      "id": "data-analysis",
+      "name": "Análise de dados e visualização",
+      "keywords": [
+        "dados",
+        "análise de dados",
+        "estatística",
+        "gráfico",
+        "visualização",
+        "excel",
+        "csv",
+        "tabela",
+        "dashboard",
+        "métricas"
+      ],
+      "bestAI": "ChatGPT",
+      "score": 88,
+      "justification": "Capacidade avançada de análise com suporte a Code Interpreter",
+      "alternative": "Claude",
+      "alternativeScore": 85
+    }
+  ],
+  "ais": [
+    {
+      "id": "chatgpt",
+      "name": "ChatGPT",
+      "description": "OpenAI ChatGPT - Versátil e criativo",
+      "color": "#10a37f"
+    },
+    {
+      "id": "claude",
+      "name": "Claude",
+      "description": "Anthropic Claude - Preciso e analítico",
+      "color": "#d97757"
+    },
+    {
+      "id": "gemini",
+      "name": "Gemini",
+      "description": "Google Gemini - Integrado e multimodal",
+      "color": "#4285f4"
+    },
+    {
+      "id": "perplexity",
+      "name": "Perplexity",
+      "description": "Perplexity - Pesquisa em tempo real",
+      "color": "#20808d"
+    }
+  ]
+}
+
