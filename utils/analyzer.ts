@@ -142,25 +142,28 @@ export function compareAllAIs(userInput: string): AnalysisResult {
   // Para cada categoria que teve match, adiciona o score à IA correspondente
   categoryScores.forEach(({ category, matchScore }) => {
     if (matchScore > 0) {
+      // Normaliza o peso do match (0 a 1)
+      const matchWeight = Math.min(matchScore / 50, 1);
+      
       // IA principal da categoria
       if (aiScores[category.bestAI]) {
-        aiScores[category.bestAI].totalScore += category.score * (matchScore / 10);
+        aiScores[category.bestAI].totalScore += category.score * matchWeight;
         aiScores[category.bestAI].count++;
         aiScores[category.bestAI].reasons.push(category.justification);
       }
       
       // IA alternativa da categoria (com peso menor)
       if (aiScores[category.alternative]) {
-        aiScores[category.alternative].totalScore += category.alternativeScore * (matchScore / 20);
+        aiScores[category.alternative].totalScore += category.alternativeScore * matchWeight * 0.7;
         aiScores[category.alternative].count++;
       }
     }
   });
 
-  // Calcula score médio para cada IA
+  // Calcula score médio para cada IA e garante que não passa de 100
   const allScores = Object.entries(aiScores).map(([ai, data]) => ({
     ai,
-    score: data.count > 0 ? Math.round(data.totalScore / data.count) : 0,
+    score: data.count > 0 ? Math.min(Math.round(data.totalScore / data.count), 100) : 0,
     reason: data.reasons[0] || 'Capacidade geral',
   }));
 
