@@ -28,53 +28,71 @@ export default function ResultCard({ result }: ResultCardProps) {
   );
 
   return (
-    <div className="w-full max-w-4xl space-y-6">
-      {/* Recomendação principal - DESTAQUE MÁXIMO */}
-      <div className="relative">
-        {/* Badge de "Melhor Escolha" */}
-        <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 z-10">
-          <div className="bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-6 py-2 rounded-full font-bold text-sm shadow-xl flex items-center gap-2">
-            <span className="text-lg">⭐</span>
-            MELHOR ESCOLHA
+    <div className="w-full max-w-4xl space-y-8">
+      {/* SUPER DESTAQUE - Recomendação principal */}
+      <div className="relative animate-fade-in">
+        {/* Badge GIGANTE de "Melhor Escolha" */}
+        <div className="absolute -top-6 left-1/2 transform -translate-x-1/2 z-20">
+          <div className="bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500 text-white px-10 py-3 rounded-full font-black text-lg shadow-2xl flex items-center gap-3 animate-pulse">
+            <span className="text-3xl">⭐</span>
+            USA ESTA!
           </div>
         </div>
 
+        {/* Card principal COM DESTAQUE MÁXIMO */}
         <div 
-          className="glass rounded-3xl shadow-2xl p-8 pt-12 space-y-6 border-4 animate-fade-in"
-          style={{ borderColor: recommendedAI?.color || '#10a37f' }}
+          className="relative rounded-3xl shadow-2xl p-10 pt-16 space-y-8 border-8 bg-white"
+          style={{ 
+            borderColor: recommendedAI?.color || '#10a37f',
+            boxShadow: `0 20px 60px -15px ${recommendedAI?.color || '#10a37f'}80`
+          }}
         >
-          <div className="flex items-center justify-center flex-wrap gap-4">
+          {/* Nome da IA - GIGANTE */}
+          <div className="flex flex-col items-center gap-6">
+            <h2 className="text-5xl md:text-6xl font-black text-center"
+                style={{ color: recommendedAI?.color || '#10a37f' }}>
+              {result.recommendedAI}
+            </h2>
             <div
-              className="px-10 py-4 rounded-2xl text-white font-extrabold text-3xl shadow-2xl transform hover:scale-105 transition-transform"
+              className="px-12 py-5 rounded-2xl text-white font-black text-2xl shadow-2xl"
               style={{ backgroundColor: recommendedAI?.color || '#10a37f' }}
             >
-              {result.recommendedAI}
+              👍 RECOMENDADO
             </div>
           </div>
 
-          <div className="bg-gradient-to-br from-white to-gray-50 rounded-2xl p-8 space-y-4 border-2 border-gray-200">
-            <div className="flex items-center justify-center flex-col gap-3">
-              <span className="text-lg font-semibold text-gray-600 uppercase tracking-wide">
-                Pontuação de adequação
-              </span>
-              <div className="flex items-center gap-4">
-                <span className={`text-6xl font-black ${getScoreColor(result.score)}`}>
+          {/* Score MASSIVO */}
+          <div className="bg-gradient-to-br from-gray-50 to-white rounded-3xl p-10 space-y-6 border-4 border-gray-100">
+            <div className="text-center space-y-4">
+              <p className="text-xl font-bold text-gray-600 uppercase tracking-widest">
+                PONTUAÇÃO
+              </p>
+              <div className="flex items-center justify-center gap-3">
+                <span className={`text-8xl md:text-9xl font-black ${getScoreColor(result.score)}`}>
                   {result.score}
                 </span>
-                <span className="text-3xl font-bold text-gray-400">/100</span>
+                <span className="text-5xl font-bold text-gray-300">/100</span>
               </div>
             </div>
-            {getScoreBar(result.score, recommendedAI?.color || '#10a37f')}
-
-            <div className="pt-6 bg-white/80 rounded-xl p-6">
-              <p className="text-gray-800 text-xl leading-relaxed font-medium text-center">{result.justification}</p>
+            
+            <div className="h-6 bg-gray-200 rounded-full overflow-hidden">
+              <div
+                className="h-full transition-all duration-1000 ease-out"
+                style={{ width: `${result.score}%`, backgroundColor: recommendedAI?.color || '#10a37f' }}
+              ></div>
             </div>
 
-            <div className="pt-4 flex items-center justify-center gap-3 bg-gradient-to-r from-gray-50 to-white rounded-lg p-5">
-              <span className="text-3xl">📂</span>
+            <div className="pt-6 bg-gradient-to-r from-blue-50 to-purple-50 rounded-2xl p-8 border-2 border-blue-100">
+              <p className="text-gray-900 text-2xl leading-relaxed font-semibold text-center">
+                {result.justification}
+              </p>
+            </div>
+
+            <div className="pt-4 flex items-center justify-center gap-4 bg-white rounded-xl p-6 shadow-inner">
+              <span className="text-4xl">📂</span>
               <div className="text-center">
-                <p className="text-sm font-bold text-gray-500 uppercase tracking-wider">Categoria</p>
-                <p className="text-xl font-extrabold text-gray-900">{result.categoryMatched}</p>
+                <p className="text-sm font-extrabold text-gray-500 uppercase tracking-widest">CATEGORIA</p>
+                <p className="text-2xl font-black text-gray-900 mt-1">{result.categoryMatched}</p>
               </div>
             </div>
           </div>
@@ -161,4 +179,5 @@ export default function ResultCard({ result }: ResultCardProps) {
     </div>
   );
 }
+
 
