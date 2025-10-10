@@ -175,13 +175,15 @@
         "script",
         "python",
         "javascript",
-        "typescript"
+        "typescript",
+        "refactoring",
+        "otimizar código"
       ],
-      "bestAI": "ChatGPT",
-      "score": 92,
-      "justification": "Excelente geração de código com amplo conhecimento de linguagens e frameworks",
-      "alternative": "Claude",
-      "alternativeScore": 90
+      "bestAI": "Claude",
+      "score": 94,
+      "justification": "Código de excelente qualidade com atenção aos detalhes, boas práticas e arquitetura sólida",
+      "alternative": "ChatGPT",
+      "alternativeScore": 92
     },
     {
       "id": "brainstorming",
