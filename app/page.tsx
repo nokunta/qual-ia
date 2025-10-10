@@ -215,14 +215,6 @@ export default function Home() {
           </div>
         )}
 
-        {/* Footer */}
-        <div className="mt-16 text-center">
-          <div className="inline-block glass rounded-full px-8 py-4 shadow-lg">
-            <p className="text-white font-medium">
-              Feito com ❤️ para ajudar a escolher a melhor IA para cada tarefa
-            </p>
-          </div>
-        </div>
       </div>
     </div>
   );
