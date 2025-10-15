@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { analyzeTask, compareAllAIs, generateDetailedExplanation, AnalysisResult } from '@/utils/analyzer';
 import ResultCard from '@/components/ResultCard';
+import NewsletterPromo from '@/components/NewsletterPromo';
 
 export default function Home() {
   const [userInput, setUserInput] = useState('');
@@ -50,8 +51,10 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen py-12 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-5xl mx-auto">
+    <>
+      <NewsletterPromo />
+      <div className="min-h-screen py-12 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-5xl mx-auto">
         {/* Header */}
         <div className="text-center mb-12 animate-fade-in">
           <div className="inline-block mb-6">
@@ -215,8 +218,9 @@ export default function Home() {
           </div>
         )}
 
+        </div>
       </div>
-    </div>
+    </>
   );
 }
 
