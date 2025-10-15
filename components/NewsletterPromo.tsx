@@ -32,7 +32,7 @@ export default function NewsletterPromo() {
             <span className="text-2xl">🚀</span>
             <div className="flex-1 min-w-0">
               <p className="font-bold text-sm sm:text-base">
-                Junta-te à <span className="text-yellow-300">Oficina de IA</span> - Comunidade Grátis 🇵🇹
+                <span className="text-yellow-300">Oficina de IA</span> - Aprende IA com cursos e uma comunidade repleta de valor 🇵🇹
               </p>
             </div>
           </div>
@@ -43,7 +43,7 @@ export default function NewsletterPromo() {
               onClick={handleJoin}
               className="flex-1 sm:flex-none bg-yellow-400 hover:bg-yellow-300 text-purple-900 font-bold text-sm px-5 py-2 rounded-lg transition-all"
             >
-              Entrar Grátis
+              Saber Mais
             </button>
             <button
               onClick={handleClose}
